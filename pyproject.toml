@@ -1,0 +1,33 @@
+[project]
+name = "alpaca-data-service"
+version = "0.1.0"
+description = "Alpaca Market Data Service"
+authors = [
+    {name = "lagarcess",email = "garceslg3@gmail.com"}
+]
+readme = "README.md"
+requires-python = "^3.11"
+dependencies = [
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+    "tqdm>=4.66.0",
+    "rich>=13.7.0",
+]
+
+[tool.poetry]
+packages = [{include = "market_data", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "requests-mock (>=1.12.1,<2.0.0)",
+    "pre-commit (>=4.5.0,<5.0.0)",
+    "black (>=25.12.0,<26.0.0)",
+    "isort (>=7.0.0,<8.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)"
+]
