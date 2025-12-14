@@ -1,0 +1,8 @@
+services:
+  alpaca-downloader:
+    build: .
+    volumes:
+      # Mount local data folder to container to persist CSVs
+      - ./data:/app/data
+    env_file:
+      - .env
