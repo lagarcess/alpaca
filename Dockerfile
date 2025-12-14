@@ -51,6 +51,10 @@ ENV PATH="/app/.venv/bin:$PATH"
 # Ensure the dynamic linker finds the ta-lib libraries (often not needed if in /usr/lib, but good safety)
 ENV LD_LIBRARY_PATH="/usr/lib:$LD_LIBRARY_PATH"
 
+# Ensure Python can import the package in `src/` when run the copied application
+# without installing the project into site-packages. This makes `from market_data...` work.
+ENV PYTHONPATH="/app/src:$PYTHONPATH"
+
 WORKDIR /app
 
 # Copy application code
