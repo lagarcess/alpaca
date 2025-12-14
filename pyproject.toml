@@ -12,6 +12,9 @@ dependencies = [
     "python-dotenv>=1.0.0",
     "tqdm>=4.66.0",
     "rich>=13.7.0",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "ta-lib>=0.6.0",
 ]
 
 [tool.poetry]
